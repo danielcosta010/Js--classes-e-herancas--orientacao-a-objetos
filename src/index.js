@@ -1,16 +1,16 @@
 import { Personagem } from "./modules/personagem.js";
 import { PersonagemView } from "./components/personagem-view.js";
+import { Mago } from "./modules/mago.js";
+import { Arqueiro } from "./modules/arqueiro.js";
+import { ArqueiroMago } from "./modules/arqueiro-mago.js";
 
-const personagemPedrinho = new Personagem('Pedrinho', 5, 'Mago');
-const personagemJose = new Personagem('José', 3, 'Arqueiro');
-const personagemClara = new Personagem('Clara', 4, 'ArqueiroMago');
+const magoAntonio = new Mago('Antônio', 4, 'Água', 4, 8)
+const magaClara = new Mago('Clara', 9, 'Fogo', 6, 8)
 
-console.log(`${personagemPedrinho.nome} é um ${personagemPedrinho.obterInsignia()}`);
-console.log(`${personagemJose.nome} é um ${personagemJose.obterInsignia()}`);
-console.log(`${personagemClara.nome} é um ${personagemClara.obterInsignia()}`);
+const aqueiroBruno = new Arqueiro('Bruno', 7, 9)
 
-const personagens = [personagemPedrinho, personagemJose, personagemClara]
+const aqueiroMagoAdão = new ArqueiroMago('Adão', 5, 4, 'Flecha e Fogo', 4, 8)
+
+const personagens = [magoAntonio, magaClara, aqueiroBruno, aqueiroMagoAdão]
 
 new PersonagemView(personagens).render()
-
-console.log(personagemClara.vida);
