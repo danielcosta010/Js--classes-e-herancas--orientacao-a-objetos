@@ -35,10 +35,10 @@ export class Personagem {
   }
 
   static verificarVencedor(personagem1, personagem2) {
-    if(personagem1 === personagem2){
+    if(personagem1.level === personagem2.level){
       return 'Empate'
     }
-    if(personagem1 > personagem2){
+    if(personagem1.level > personagem2.level){
       return `${personagem1.nome} ${personagem1.constructor.tipo} é o vencedor`
     }
     return `${personagem2.nome} ${personagem2.constructor.tipo} é o vencedor`
