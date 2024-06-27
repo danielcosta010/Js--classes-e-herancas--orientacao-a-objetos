@@ -6,7 +6,7 @@ export class ArqueiroMago extends Personagem {
   ladoMago
   ladoArqueiro
   static tipo = 'ArqueiroMago'
-  static descricao = 'Com um arco e bastão mágico, está em um patamar superior'
+  static descricao = 'Com um arco e bastão mágico, estou em um patamar superior'
 
   constructor(nome, destreza, elementoMagico, levelMagico, inteligencia){
     super(nome)
@@ -16,4 +16,6 @@ export class ArqueiroMago extends Personagem {
   obterInsignia(){
     return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`
   }
+  
 }
+  
